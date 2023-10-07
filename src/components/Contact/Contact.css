@@ -1,0 +1,64 @@
+/* Base styles for screens larger than 480px (medium screens and up) */
+.contact-form {
+  padding: 4 3rem;
+  display: flex;
+  height: 80vh;
+  margin-top: 4rem;
+}
+
+.c-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+}
+
+.c-right > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.c-right .user {
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3rem;
+  outline: none;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.textarea {
+  height: 4rem !important;
+}
+
+.c-blur1 {
+  top: 1rem;
+  left: 8rem;
+}
+
+/* Adjustments for screens up to 480px wide (small mobile screens) */
+@media screen and (max-width: 480px) {
+  .contact-form {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .c-right {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  /* Adjust the font size and padding for better mobile readability */
+  .awesome span {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .user,
+  .button {
+    margin: 0;
+    width: 100%; /* Full width for input and button */
+  }
+}
